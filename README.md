@@ -3,6 +3,9 @@
 Turns manufacturer price sheets (Excel or CSV, any layout) into the 5-column CSV that
 Jobber's Products & Services import expects: `Name, Description, Cost, Taxable, Category`.
 
+**Live demo:** https://project-creason.github.io/jobber_import_etl/ runs this same code in your browser
+(via Pyodide). Try the samples or drop in your own price sheet; files never leave your computer.
+
 ## Run it
 
 ```
