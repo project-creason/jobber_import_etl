@@ -1,0 +1,37 @@
+{
+  "_comment": "One entry per vendor. 'match' is a case-insensitive substring of the incoming file name. Column lists are candidates, first one found wins.",
+  "defaults": {
+    "taxable": "TRUE",
+    "category": "Product",
+    "price_multiplier": 1.0,
+    "round_to": 2,
+    "drop_zero_price": true
+  },
+  "vendors": [
+    {
+      "name": "American Fyre Designs",
+      "match": ["afd"],
+      "prefix": "AFD",
+      "sku_columns": ["Data Part #", "Part #", "Part Number"],
+      "description_columns": ["Description"],
+      "price_columns": ["List", "List Price", "MSRP"],
+      "_price_note": "AFD sheet carries both List and Net Price. Jobber 'Cost' is the customer-facing unit price, so List is used. Switch to 'Net Price' if you want dealer cost."
+    },
+    {
+      "name": "Bromic",
+      "match": ["bromic"],
+      "prefix": "Bromic",
+      "sku_columns": ["Part Number", "SKU", "Name"],
+      "description_columns": ["Description"],
+      "price_columns": ["MSRP", "List", "Cost"]
+    },
+    {
+      "name": "Hearth & Home Technologies",
+      "match": ["hht", "majestic", "heat & glo", "heatilator"],
+      "prefix": "HHT",
+      "sku_columns": ["Model", "Part Number", "Name"],
+      "description_columns": ["Description"],
+      "price_columns": ["Suggested Retail", "MSRP", "List", "Cost"]
+    }
+  ]
+}
